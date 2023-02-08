@@ -1,12 +1,8 @@
 <div align="center" id="header">
-  
-  <h3>Projeto com Django</h3>
+  <a href="#" text-align: center><img src="emconstrucao.png" alt="Logo"></a>
 </div>
 
-
-<!-- ============== ABOUT ============== -->
-## Sobre o projeto
-<a href="#"><img src="emconstrucao.png" alt="Logo"></a>
+## Sistema de Estacionamento
 
 <div>
  Porjeto desenvolvido durante o curso: "Curso Programador Web 2.0 Moderno 2022 Python, Django, React"
