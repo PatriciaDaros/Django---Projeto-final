@@ -6,13 +6,12 @@
 
 <!-- ============== ABOUT ============== -->
 ## Sobre o projeto
+<a href="#"><img src="emconstrucao.png" alt="Logo"></a>
 
 <div>
  Porjeto desenvolvido durante o curso: "Curso Programador Web 2.0 Moderno 2022 Python, Django, React"
 
 </div>
-
-<a href="#"><img src="Animação_Adote.gif" alt="Logo"></a>
 
 
 <!-- ============== LANGUAGE ============== -->
@@ -33,7 +32,7 @@
 ## Instalação
 
 ```
-
+git clone https://github.com/PatriciaDaros/Django---Projeto-final.git
 ```
 
 
