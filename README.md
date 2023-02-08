@@ -28,7 +28,7 @@
 ## Instalação
 
 ```
-git clone https://github.com/PatriciaDaros/Django---Projeto-final.git
+https://github.com/PatriciaDaros/Sistema-de-Estacionamento-com-Django.git
 ```
 
 
