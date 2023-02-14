@@ -6,6 +6,10 @@ p {
     text-align: justify;
 }
 
+.enviar {
+    float: right;
+}
+
 body {
     font-family: 'Sarala', sans-serif;
 }
