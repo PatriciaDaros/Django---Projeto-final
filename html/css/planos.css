@@ -1,0 +1,14 @@
+.planos {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.cont {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.espaco {
+    height: 8rem;
+}

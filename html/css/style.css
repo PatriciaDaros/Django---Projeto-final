@@ -1,0 +1,251 @@
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+p {
+    text-align: justify;
+}
+
+body {
+    font-family: 'Sarala', sans-serif;
+}
+
+#gerais2{
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display:flex;
+}
+
+header {
+    background: #79BD9A;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-itens {
+    justify-content: flex-end;
+    color: write;
+}
+
+p .menu-slogan{
+    display: inline;
+    width: 25%;
+    float: right;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    /* color: #FFF; */
+    color: #6d7a81;
+    padding: 20px 5px;
+}
+
+#logo {
+    float: left;
+    width: 40%;
+    height: 40%;
+    display: block;
+}
+
+nav {
+    float: right;
+    padding: 20px;
+}
+
+#menu-icon {
+    display: hidden;
+    width: 40%;
+    height: 40%;
+
+}
+
+#menu-icon {
+    display: none;
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+}
+
+footer {
+    background-color: #79BD9A;
+    color: write;
+    text-align: center;
+    padding: 10px;
+}
+
+.final {
+    position: sticky;
+    z-index: 700;
+}
+
+@media (max-width: 600px) {
+    #menu-icon {
+        display: inline-block;
+    }
+    .menu {
+        width: 100%;
+    }
+
+    .img-espaco-interior{
+        width: 85%;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        right:20px;
+        top: 60px;
+        padding: 20px;
+        background: #fff;
+        width: 20%;
+    }
+
+    nav li{
+        text-align: left;
+        width: 90%;
+        padding: 10px 0px;
+        margin: 0px;
+    }
+
+    a:hover {
+        background: #79BD9A;
+    }
+
+    nav:hover ul{
+        display: block;
+    }
+
+    nav li a{
+        color: #3B8686;
+    }
+
+    .depoimento {
+        box-shadow: 10px 10px 5px #888888;
+        border-radius: 5px;
+        width: 97%;
+        padding-right: 10px;
+    }
+    
+    .nav-footer {
+        display:none;
+    }
+    
+    #copyrigth p {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 481px) {
+    * {
+        justify-items: center;
+    }
+
+    .promo1, .promo2{
+        justify-content: center;
+        padding: 10px 10px 10px 10px;
+        width:100%;
+    }
+
+    .gerais3, .gerais2, .gerais1, .depoimento{
+        justify-content: center;
+    }
+
+    .depoimento {
+        width: 97%;
+        padding-right: 10px;
+        padding-bottom: 50;
+    }
+
+    .dep, .promo, .gerais {
+        display: flex;
+        width: 97%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 25px;
+    }
+
+}
+
+.titulo {
+    font-size: 30px;
+}
+
+.fixarRodape {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 7.5rem;  
+}
+
+.img-espaco-interior {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@media (min-width: 768px) {
+
+    .img-espaco-interior{
+        width: 100%;
+    }
+
+    .img-espaco-interior {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .texto {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); 
+    }
+}
+
+@media (max-width: 972px){
+    .imag {
+        display: none;
+    }
+}
+
+.img-espaco-interior #paragrado{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fomulario{
+    width: 50%;
+}
+
+.pai-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.texto {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.filho-form {
+    width: 30%;
+}
