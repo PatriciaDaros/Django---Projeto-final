@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block main %}
+
+    <div class="container-fluid">
+        <hr>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center">
+                    <h2> Cadastro </h2>    
+                </div>
+                <form action="{% url 'movrot_novo' %}" method="POST">
+                    {% csrf_token %}
+        
+                    {{ form|bootstrap }}
+        
+                    <button type="submit" class = "btn btn-primary" >Cadastrar</button>
+        
+                </form>
+            </div>
+
+            <div class="col-sm-6">
+                <h2 class = "d-flex justify-content-center"> Movimento Rotativo </h2>
+                <table class="table">
+                    <thead class="table table-hover">
+                      <tr>
+                        <th scope="col"> Id </th>
+                        <th scope="col"> Checkin</th>
+                        <th scope="col">Checkout</th>
+                        <th scope="col">veiculo</th>
+                        <th scope="col">pago</th>
+                      </tr>
+                    </thead>
+    
+                    <tbody>
+                        
+                    {% for mov_rot in mov_rot %}    
+                        <tr>
+                            <th scope="row"> 
+                                <a href="{% url 'update_mov_rot' mov_rot.id %}"> {{mov_rot.id}} </a>  
+                            </th>
+                            
+                            <td>
+                                <a href="{% url 'update_mov_rot' mov_rot.id %}"> {{mov_rot.checkin}} </a>  
+
+                            </td>
+                            
+                            <td>
+                                <a href="{% url 'update_mov_rot' mov_rot.id %}"> {{mov_rot.checkout}} </a>  
+                            </td>
+                            
+                            <td>
+                                <a href="{% url 'update_mov_rot' mov_rot.id %}"> {{mov_rot.veiculo}} </a>  
+                            </td>
+                            
+                            <td>
+                                <a href="{% url 'update_mov_rot' mov_rot.id %}"> {{mov_rot.pago}} </a>  
+                            </td>
+                        </tr>
+                    {% endfor %}
+    
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

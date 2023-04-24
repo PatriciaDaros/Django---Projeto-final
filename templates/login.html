@@ -1,0 +1,55 @@
+{% extends "base3.html" %}
+
+    {% block main %}
+
+    <div class = row>
+        
+      <div class = "col-3 borda">
+      </div>
+
+
+        <div class = "col-6 tela-pading flex-pai borda">
+            <div class="form-items">
+              {% if messages %}
+                  {% for message in messages %}
+                      <div class="alert {{ message.tags }}">{{ message }}</div>
+                  {% endfor %}
+              {% endif %}
+              
+              <h3>Bem vindo novamente!</h3>
+
+              <form action="{% url 'logar' %}" method="POST">
+                  {% csrf_token %}
+                  <div class="col-md-12">
+                      {% comment %} <input class="form-control" type="text" name="name" placeholder="Nome" required> {% endcomment %}
+                      <label>Usuário:</label>
+                      <input type="text" class="form-control" placeholder="Username..." name="username">
+                  </div>
+
+                  <div>
+                      <br>
+                  </div>
+
+                  <div class="col-md-12">
+                      <label>Senha:</label>
+                      <input type="password" class="form-control" placeholder="Senha..." name="senha">
+                  </div>    
+
+
+                  <div class="form-button mt-3 col-md-6">
+                      <input type="submit" value="LOGAR" class="btn-primary">    
+                  </div>
+                  
+              </form>
+          </div>
+        </div>
+
+
+        <div class = "col-3">
+        
+        </div>
+    
+      </div>
+
+    
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block main %}
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <h2> Listagem do movimento de mensalistas </h2>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-6">
+                <form action="{% url 'movmen_novo' %}" method="POST">
+                    {% csrf_token %}
+        
+                    {{ form|bootstrap }}
+        
+                    <button type="submit" class = "btn btn-primary">Cadastrar</button>
+        
+                </form>
+            </div>
+            
+            <div class="col-6">
+                <ul>
+                    {% for pessoa in  pessoas %}
+                        <li>
+                            <a href="{% url 'update_mov_men' pessoa.id %}"> 
+                                {{ pessoa.mensalista }} - {{ pessoa.total }} </a>    
+                        </li>           
+                    {% endfor %}
+                </ul>                
+            </div> 
+            
+        </div>
+    </div>
+
+    
+{% endblock %}

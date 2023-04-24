@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load  bootstrap %}
+
+{% block main %}
+
+    <hr>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+            <h2 class = "d-flex justify-content-center"> Cadastrar </h2>
+
+            <form action="{% url 'pessoa_nova' %}" method="POST">
+                {% csrf_token %}
+    
+                {{ form|bootstrap }}
+    
+                <button type="submit" class = "btn btn-primary ">Cadastrar</button>
+    
+            </form>
+        </div>
+
+        <div class="col-sm-6">
+            <h2 class = "d-flex justify-content-center"> Clientes </h2>
+            <table class="table">
+                <thead class="table table-hover">
+                  <tr>
+                    <th scope="col"> Id </th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Telefone</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                    
+                {% for pessoa in pessoas %}    
+                    <tr>
+                        <th scope="row"> 
+                            <a href="{% url 'update_pessoa' pessoa.id %}"> {{pessoa.id}}  </a> 
+                        </th>
+
+                        <td>
+                            <a href="{% url 'update_pessoa' pessoa.id %}"> {{pessoa.nome}}  </a> 
+                        </td>
+
+                        <td>
+                            <a href="{% url 'update_pessoa' pessoa.id %}"> {{pessoa.endereco}}  </a>
+                        </td>
+
+                        <td>
+                            <a href="{% url 'update_pessoa' pessoa.id %}"> {{pessoa.telefone}}  </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+              </table>
+        </div>
+
+    </div>
+
+{% endblock %}

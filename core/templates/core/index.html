@@ -1,0 +1,35 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block main %}
+    <STYLE>A {text-decoration: none;};   
+    </STYLE>
+    <div class = "container">
+        <div class="row tela-pading flex-pai">
+            <div class="col-md-6">
+                <div class = "row d-flex justify-content-center">
+                    <h1 > Ladding Page <h1>
+                    <h3 > Estacionamento 24h <h3>
+
+                    <hr>
+
+                    <p class = "paragrafo link" > 
+                        Sistema de estacionamento desenolvido durante o 
+                        <a href="https://www.udemy.com/course/fundamentos-da-web-que-todo-dev-precisa-saber/">curso</a>.
+                        Sistema e site destinado para empresas de estacionamento.
+                    </p>
+
+                    <a class = "btn btn-dark" href="{% url 'logar' %}"> Acessar sistema </a>
+                    <a class = "btn btn-dark" href="{% url 'website_home' %}"> Acessar Site </a>  
+
+                </div>
+            </div>
+
+            <div class="col-md-6 ">
+                <img class = "img" src = "{% static 'img/ladingPage.jpg' %}" width = "450rem" alt="lading page">
+                <br>
+            {% comment %} <a class = "d-flex justify-content-center link" href="http://www.freepik.com">Designed by stories / Freepik</a> {% endcomment %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

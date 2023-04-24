@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load  bootstrap %}
+
+
+{% block main %}
+
+    <div class="container-fluid">
+        <div class = "row d-flex justify-content-center">
+            <h2> Alterar movimento rotativo: {{ mov_rot }} </h2>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-8">
+                <form action="{% url 'update_mov_rot' mov_rot.id %}" method="post">
+    
+                    {% csrf_token %}
+            
+                    {{ form|bootstrap }}
+            
+                    <button type="submit" class = "btn btn-primary" >Salvar</button>
+
+                    <a href="{% url 'delete_mov_rot' mov_rot.id %}" class = "btn btn-danger"> Deletar </a>
+                
+                </form>
+    
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

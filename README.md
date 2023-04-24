@@ -37,6 +37,38 @@ https://github.com/PatriciaDaros/Sistema-de-Estacionamento-com-Django.git
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
+## Telas 
+
+<div align="center" id="header">
+  Área administrativa do próprio django.
+  <a href="#" text-align: center><img src="img/Admin.png" alt="Login"></a>
+</div>
+
+<div align="center" id="header">
+  Login
+  <a href="#" text-align: center><img src="img/login.png" alt="Login"></a>
+</div>
+
+<div align="center" id="header">
+  Lading Page
+  <a href="#" text-align: center><img src="img/laddingPage.png" alt="Login"></a>
+</div>
+
+O sistemas possui as funcionalidades de cadastro, alteração  e delete das movimentações de veiculos, mensalistas, pessoas e veiculos.
+
+<div align="center" id="header">
+  Cadastro
+  <a href="#" text-align: center><img src="img/cadastro.png" alt="Login"></a>
+  Update
+  <a href="#" text-align: center><img src="img/alterar.png" alt="Login"></a>
+</div>
+
+<div align="center" id="header">
+  Vinculado ao sistema adminstrativo existe um site. 
+  <a href="#" text-align: center><img src="img/site.png" alt="Login"></a>
+  Com funcionalidades como integração de mapa e envio de dados via formulário.
+  <a href="#" text-align: center><img src="img/.png" alt="Login"></a>
+</div>
 
 <!-- ============== AUTHOR ============== -->
 ## Autor

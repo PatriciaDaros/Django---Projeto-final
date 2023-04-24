@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load  bootstrap %}
+
+{% block main %}
+
+    <div class="container-fluid">
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class= "d-flex justify-content-center">
+                    <h2> Listagem de veiculos </h2>
+                </div>
+
+                <form action="{% url 'veiculo_novo' %}" method="POST">
+                    {% csrf_token %}
+        
+                    {{ form|bootstrap }}
+        
+                    <button type="submit" class = "btn btn-primary" >Cadastrar</button>
+        
+                </form>
+            </div>
+            {% comment %} <div class="col-md-6">
+                <ul>
+                    {% for veiculo in  veiculos %}
+                        <li> 
+                            <a href="{% url 'update_veiculo' veiculo.id %}"> {{ veiculo.placa }} - {{ veiculo.proprietario }}  </a> 
+                        </li>    
+                    {% endfor %}
+                </ul>    
+            </div> {% endcomment %}
+            <div class="col-sm-6">
+                <h2 class = "d-flex justify-content-center"> Veiculos </h2>
+                <table class="table">
+                    <thead class="table table-hover">
+                      <tr>
+                        <th scope="col"> Id </th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Proprietário</th>
+                      </tr>
+                    </thead>
+    
+                    <tbody>
+                        
+                    {% for veiculo in veiculos %}    
+                        <tr>
+                            <th scope="row"> 
+                                <a href="{% url 'update_veiculo' veiculo.id %}"> {{veiculo.id}} </a> 
+                            </th>
+
+                            <td>
+                                <a href="{% url 'update_veiculo' veiculo.id %}"> {{veiculo.marca}} </a> 
+                            </td>
+
+                            <td>
+                                <a href="{% url 'update_veiculo' veiculo.id %}"> {{veiculo.placa}} </a> 
+                            </td>
+
+                            <td>
+                                <a href="{% url 'update_veiculo' veiculo.id %}"> {{veiculo.proprietario}} </a> 
+                            </td>
+                        </tr>
+                    {% endfor %}
+    
+                    </tbody>
+                  </table>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

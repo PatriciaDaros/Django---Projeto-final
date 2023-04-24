@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block main %}
+
+    <div class="container-fluid">
+
+        <hr>
+
+        <div class="row">
+            
+            <div class="col-sm-6">
+
+                <div class = "d-flex justify-content-center">
+                    <h2> Cadastro </h2>
+                </div>
+
+                <form action="{% url 'mensalista_novo' %}" method="POST">
+                    {% csrf_token %}
+        
+                    {{ form|bootstrap }}
+        
+                    <button type="submit" class = "btn btn-primary">Cadastrar</button>
+        
+                </form>
+            </div>
+
+            <div class="col-sm-6">
+                <h2 class = "d-flex justify-content-center"> Movimento de Mensalistas </h2>
+                <table class="table">
+                    <thead class="table table-hover">
+                      <tr>
+                        <th scope="col"> 
+                            Id 
+                        </th>
+                        
+                        <th scope="col">Veiculo </th>
+                        <th scope="col">Inicio </th>
+                        <th scope="col">mensalista </th>
+                      </tr>
+                    </thead>
+    
+                    <tbody>
+                        
+                    {% for mensalista in mensalistas %}    
+                        <tr>
+                            <th scope="row"> 
+                                <a href="{% url 'update_mensalista' mensalista.id %}"> {{mensalista.id}}  </a> 
+                            </th>
+                            
+                            <td>
+                                <a href="{% url 'update_mensalista' mensalista.id %}"> {{mensalista.veiculo}}  </a> 
+                            </td>
+                            
+                            <td>
+                                <a href="{% url 'update_mensalista' mensalista.id %}"> {{mensalista.inicio}}  </a>
+                            </td>
+                            
+                            <td>
+                                <a href="{% url 'update_mensalista' mensalista.id %}"> {{mensalista.mensalista}}  </a> 
+                            </td>
+                        </tr>
+                    {% endfor %}
+    
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
