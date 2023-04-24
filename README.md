@@ -67,7 +67,7 @@ O sistemas possui as funcionalidades de cadastro, alteração  e delete das movi
   Vinculado ao sistema adminstrativo existe um site. 
   <a href="#" text-align: center><img src="img/site.png" alt="Login"></a>
   Com funcionalidades como integração de mapa e envio de dados via formulário.
-  <a href="#" text-align: center><img src="img/.png" alt="Login"></a>
+  <a href="#" text-align: center><img src="img/mapa.png" alt="Login"></a>
 </div>
 
 <!-- ============== AUTHOR ============== -->
